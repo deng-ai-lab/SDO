@@ -97,11 +97,12 @@ Replace this section with actual images and metrics when available.
 ## 📚 Citation
 If you use this code or idea, please cite the project:
 ```bibtex
-@misc{sdo2024,
-  title     = {You Only Look One Step: Accelerating Backpropagation in Diffusion Sampling with Gradient Shortcuts},
-  author    = {Anonymous},
-  year      = {2024},
-  note      = {ArXiv preprint}
+@article{dou2025you,
+  title={You Only Look One Step: Accelerating Backpropagation in Diffusion Sampling with Gradient Shortcuts},
+  author={Dou, Hongkun and Li, Zeyu and Jiang, Xingyu and Li, Hongjue and Yang, Lijun and Yao, Wen and Deng, Yue},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2025},
+  publisher={IEEE}
 }
 ```
 
