@@ -5,11 +5,8 @@
 <h1 align="center">You Only Look One Step: Accelerating Backpropagation in Diffusion Sampling with Gradient Shortcuts</h1>
 
 ## 📌 Overview
-Shortcut Diffusion Optimization (SDO) is a lightweight, high-performance approach to optimize diffusion sampling with a single-step gradient shortcut. It targets fast latent optimization while preserving semantic guidance, and can be extended to network parameter tuning for alignment tasks.
+Shortcut Diffusion Optimization (SDO) is a lightweight, high-performance approach to optimizing diffusion sampling with a one-step gradient shortcut. It targets fast latent optimization while preserving semantic guidance, and can be extended to network parameter tuning for alignment tasks.
 
-<p align="center">
-  <img src="assets/intro2_00.png" height="525">
-</p>
 
 <p align="center">
   <img src="assets/method2_00.png" height="170">
@@ -26,16 +23,16 @@ SDO runs a diffusion sampler in two phases:
 This produces a lightweight training graph with a tractable memory footprint while still providing an effective signal to update the latent variable.
 
 ## 🛠 Implementation Notes
-This repository includes a runnable reference implementation in `style_guide_implict_2_publish.py`, which:
+This repository includes a runnable reference implementation in `style_guide_implict.py`, which:
 - Uses Stable Diffusion v1.4 for the denoising backbone.
 - Applies classifier-free guidance with a fixed prompt.
 - Optimizes a latent `z` to minimize the Gram-matrix style distance between the generated output and a reference image, using CLIP features.
 
-It also includes a CLIP-guided latent optimization variant in `clip_guide_implict_publish.py`, which:
+It also includes a CLIP-guided latent optimization variant in `clip_guide_implict.py`, which:
 - Uses a guided-diffusion UNet backbone and DDIM sampling.
 - Optimizes a latent `z` with a CLIP text-image alignment loss plus a pixel similarity term.
 
-An aesthetic-optimized variant in `aesthetic_implict_2_publish.py`:
+An aesthetic-optimized variant in `aesthetic_implict.py`:
 - Uses Stable Diffusion v1.4 and DDIM inversion to initialize the latent.
 - Optimizes the latent to maximize (or target) an aesthetic score from CLIP-based heads.
 
@@ -90,8 +87,9 @@ The script writes:
 - `loss.png`: the optimization loss curve
 
 ## 🧪 Results
-Qualitative results and ablations should be placed in `assets/` and linked here.
-Replace this section with actual images and metrics when available.
+<p align="center">
+  <img src="assets/intro2_00.png" height="525">
+</p>
 
 
 ## 📚 Citation
